@@ -1,0 +1,372 @@
+airline_iata,destination_airport_iata,destination_city,destination_country
+SQ,SYD,Sydney,Australia
+SQ,MEL,Melbourne,Australia
+SQ,BNE,Brisbane,Australia
+SQ,PER,Perth,Australia
+SQ,ADL,Adelaide,Australia
+SQ,CNS,Cairns,Australia
+SQ,AKL,Auckland,New Zealand
+SQ,CHC,Christchurch,New Zealand
+SQ,NAN,Nadi,Fiji
+SQ,POM,Port Moresby,Papua New Guinea
+SQ,JNB,Johannesburg,South Africa
+SQ,LHR,London,United Kingdom
+SQ,LGW,London,United Kingdom
+SQ,MAN,Manchester,United Kingdom
+SQ,CDG,Paris,France
+SQ,FRA,Frankfurt,Germany
+SQ,MUC,Munich,Germany
+SQ,ZRH,Zurich,Switzerland
+SQ,AMS,Amsterdam,Netherlands
+SQ,BRU,Brussels,Belgium
+SQ,BCN,Barcelona,Spain
+SQ,FCO,Rome,Italy
+SQ,MXP,Milan,Italy
+SQ,CPH,Copenhagen,Denmark
+SQ,ATH,Athens,Greece
+SQ,HEL,Helsinki,Finland
+SQ,IST,Istanbul,Turkey
+SQ,LAX,Los Angeles,United States
+SQ,SFO,San Francisco,United States
+SQ,JFK,New York,United States
+SQ,EWR,Newark,United States
+SQ,SEA,Seattle,United States
+SQ,YVR,Vancouver,Canada
+SQ,DXB,Dubai,United Arab Emirates
+SQ,DOH,Doha,Qatar
+SQ,AUH,Abu Dhabi,United Arab Emirates
+SQ,JED,Jeddah,Saudi Arabia
+SQ,BOM,Mumbai,India
+SQ,DEL,New Delhi,India
+SQ,BLR,Bengaluru,India
+SQ,MAA,Chennai,India
+SQ,HYD,Hyderabad,India
+SQ,CCU,Kolkata,India
+SQ,COK,Kochi,India
+SQ,TRV,Thiruvananthapuram,India
+SQ,AMD,Ahmedabad,India
+SQ,TRZ,Tiruchirappalli,India
+SQ,ATQ,Amritsar,India
+SQ,CMB,Colombo,Sri Lanka
+SQ,DAC,Dhaka,Bangladesh
+SQ,KTM,Kathmandu,Nepal
+SQ,BWN,Bandar Seri Begawan,Brunei
+SQ,HKG,Hong Kong,Hong Kong
+SQ,TPE,Taipei,Taiwan
+SQ,PEK,Beijing,China
+SQ,PVG,Shanghai,China
+SQ,CAN,Guangzhou,China
+SQ,ICN,Seoul,South Korea
+SQ,NRT,Tokyo,Japan
+SQ,HND,Tokyo,Japan
+SQ,KIX,Osaka,Japan
+SQ,FUK,Fukuoka,Japan
+SQ,NGO,Nagoya,Japan
+SQ,BKK,Bangkok,Thailand
+SQ,USM,Ko Samui,Thailand
+SQ,KUL,Kuala Lumpur,Malaysia
+SQ,MNL,Manila,Philippines
+SQ,CEB,Cebu,Philippines
+SQ,DPS,Denpasar,Indonesia
+SQ,CGK,Jakarta,Indonesia
+SQ,RGN,Yangon,Myanmar
+SQ,HAN,Hanoi,Vietnam
+SQ,SGN,Ho Chi Minh City,Vietnam
+TR,KUL,Kuala Lumpur,Malaysia
+TR,PEN,Penang,Malaysia
+TR,IPH,Ipoh,Malaysia
+TR,LGK,Langkawi,Malaysia
+TR,BKI,Kota Kinabalu,Malaysia
+TR,KCH,Kuching,Malaysia
+TR,MYY,Miri,Malaysia
+TR,SBW,Sibu,Malaysia
+TR,KBR,Kota Bharu,Malaysia
+TR,KUA,Kuantan,Malaysia
+TR,MKZ,Malacca,Malaysia
+TR,CGK,Jakarta,Indonesia
+TR,DPS,Denpasar,Indonesia
+TR,SUB,Surabaya,Indonesia
+TR,YIA,Yogyakarta,Indonesia
+TR,LOP,Praya,Indonesia
+TR,MDC,Manado,Indonesia
+TR,BPN,Balikpapan,Indonesia
+TR,UPG,Makassar,Indonesia
+TR,PKU,Pekanbaru,Indonesia
+TR,PLM,Palembang,Indonesia
+TR,SRG,Semarang,Indonesia
+TR,PDG,Padang,Indonesia
+TR,KJT,Majalengka,Indonesia
+TR,TJQ,Tanjung Pandan,Indonesia
+TR,LBJ,Labuan Bajo,Indonesia
+TR,MNL,Manila,Philippines
+TR,CEB,Cebu,Philippines
+TR,ILO,Iloilo City,Philippines
+TR,CRK,Angeles City,Philippines
+TR,DVO,Davao City,Philippines
+TR,SGN,Ho Chi Minh City,Vietnam
+TR,HAN,Hanoi,Vietnam
+TR,DAD,Da Nang,Vietnam
+TR,PQC,Phu Quoc,Vietnam
+TR,CXR,Nha Trang,Vietnam
+TR,PNH,Phnom Penh,Cambodia
+TR,SAI,Siem Reap,Cambodia
+TR,RGN,Yangon,Myanmar
+TR,BKK,Bangkok,Thailand
+TR,DMK,Bangkok,Thailand
+TR,HKT,Phuket,Thailand
+TR,KBV,Krabi,Thailand
+TR,USM,Ko Samui,Thailand
+TR,CNX,Chiang Mai,Thailand
+TR,HDY,Hat Yai,Thailand
+TR,CEI,Chiang Rai,Thailand
+TR,HKG,Hong Kong,Hong Kong
+TR,TPE,Taipei,Taiwan
+TR,KHH,Kaohsiung,Taiwan
+TR,ICN,Seoul,South Korea
+TR,PUS,Busan,South Korea
+TR,CJU,Jeju City,South Korea
+TR,NRT,Tokyo,Japan
+TR,HND,Tokyo,Japan
+TR,KIX,Osaka,Japan
+TR,FUK,Fukuoka,Japan
+TR,NGO,Nagoya,Japan
+TR,OKA,Okinawa,Japan
+TR,CTS,Sapporo,Japan
+TR,PEK,Beijing,China
+TR,PKX,Beijing,China
+TR,PVG,Shanghai,China
+TR,CAN,Guangzhou,China
+TR,SZX,Shenzhen,China
+TR,TFU,Chengdu,China
+TR,CKG,Chongqing,China
+TR,KMG,Kunming,China
+TR,HGH,Hangzhou,China
+TR,XMN,Xiamen,China
+TR,HAK,Haikou,China
+TR,FOC,Fuzhou,China
+TR,NKG,Nanjing,China
+TR,WUH,Wuhan,China
+TR,CSX,Changsha,China
+TR,CGO,Zhengzhou,China
+TR,TNA,Jinan,China
+TR,TAO,Qingdao,China
+TR,SHE,Shenyang,China
+TR,WUX,Wuxi,China
+TR,KWE,Guiyang,China
+TR,NNG,Nanning,China
+TR,DYG,Zhangjiajie,China
+TR,SWA,Shantou,China
+TR,HFE,Hefei,China
+TR,KHN,Nanchang,China
+TR,SYX,Sanya,China
+TR,JJN,Quanzhou,China
+TR,NGB,Ningbo,China
+TR,TSN,Tianjin,China
+TR,XIY,Xi'an,China
+TR,SYD,Sydney,Australia
+TR,MEL,Melbourne,Australia
+TR,BNE,Brisbane,Australia
+TR,PER,Perth,Australia
+TR,ADL,Adelaide,Australia
+TR,DRW,Darwin,Australia
+TR,AKL,Auckland,New Zealand
+TR,NAN,Nadi,Fiji
+TR,NOU,Noumea,New Caledonia
+TR,POM,Port Moresby,Papua New Guinea
+TR,DEL,New Delhi,India
+TR,BOM,Mumbai,India
+TR,BLR,Bengaluru,India
+TR,MAA,Chennai,India
+TR,HYD,Hyderabad,India
+TR,COK,Kochi,India
+TR,CCU,Kolkata,India
+TR,TRV,Thiruvananthapuram,India
+TR,TRZ,Tiruchirappalli,India
+TR,AMD,Ahmedabad,India
+TR,CJB,Coimbatore,India
+TR,ATQ,Amritsar,India
+TR,VTZ,Visakhapatnam,India
+TR,GAU,Guwahati,India
+TR,VGA,Vijayawada,India
+TR,CMB,Colombo,Sri Lanka
+TR,DAC,Dhaka,Bangladesh
+TR,KTM,Kathmandu,Nepal
+TR,PBH,Paro,Bhutan
+TR,MLE,Male,Maldives
+TR,DXB,Dubai,United Arab Emirates
+TR,JED,Jeddah,Saudi Arabia
+TR,MED,Medina,Saudi Arabia
+TR,ATH,Athens,Greece
+TR,ADD,Addis Ababa,Ethiopia
+EK,DXB,Dubai,United Arab Emirates
+QR,DOH,Doha,Qatar
+CX,HKG,Hong Kong,Hong Kong
+MH,KUL,Kuala Lumpur,Malaysia
+MH,BKI,Kota Kinabalu,Malaysia
+MH,KCH,Kuching,Malaysia
+MH,PEN,Penang,Malaysia
+QF,SYD,Sydney,Australia
+QF,MEL,Melbourne,Australia
+QF,BNE,Brisbane,Australia
+QF,PER,Perth,Australia
+QF,ADL,Adelaide,Australia
+QF,DRW,Darwin,Australia
+QF,CNS,Cairns,Australia
+GA,CGK,Jakarta,Indonesia
+GA,DPS,Denpasar,Indonesia
+GA,SUB,Surabaya,Indonesia
+TG,BKK,Bangkok,Thailand
+TG,CNX,Chiang Mai,Thailand
+TG,HKT,Phuket,Thailand
+KE,ICN,Seoul,South Korea
+KE,PUS,Busan,South Korea
+OZ,ICN,Seoul,South Korea
+JL,NRT,Tokyo,Japan
+JL,HND,Tokyo,Japan
+JL,KIX,Osaka,Japan
+NH,NRT,Tokyo,Japan
+NH,HND,Tokyo,Japan
+MM,KIX,Osaka,Japan
+MM,NRT,Tokyo,Japan
+7C,ICN,Seoul,South Korea
+7C,CJU,Jeju City,South Korea
+7C,PUS,Busan,South Korea
+BR,TPE,Taipei,Taiwan
+BR,KHH,Kaohsiung,Taiwan
+JX,TPE,Taipei,Taiwan
+CI,TPE,Taipei,Taiwan
+CI,KHH,Kaohsiung,Taiwan
+MU,PVG,Shanghai,China
+MU,PKX,Beijing,China
+MU,CAN,Guangzhou,China
+MU,CSX,Changsha,China
+MU,NKG,Nanjing,China
+MU,WUH,Wuhan,China
+MU,XIY,Xi'an,China
+MU,CGO,Zhengzhou,China
+MU,KHN,Nanchang,China
+MU,NGB,Ningbo,China
+CA,PEK,Beijing,China
+CA,PVG,Shanghai,China
+CA,CKG,Chongqing,China
+CA,TFU,Chengdu,China
+CZ,CAN,Guangzhou,China
+CZ,SZX,Shenzhen,China
+CZ,CSX,Changsha,China
+CZ,WUH,Wuhan,China
+CZ,CGO,Zhengzhou,China
+MF,XMN,Xiamen,China
+MF,FOC,Fuzhou,China
+MF,JJN,Quanzhou,China
+MF,NGB,Ningbo,China
+HU,HAK,Haikou,China
+HU,XIY,Xi'an,China
+HU,LZH,Lanzhou,China
+3U,TFU,Chengdu,China
+3U,CKG,Chongqing,China
+WU,CKG,Chongqing,China
+SC,TAO,Qingdao,China
+SC,TNA,Jinan,China
+SC,PVG,Shanghai,China
+ZH,SZX,Shenzhen,China
+ZH,CAN,Guangzhou,China
+HO,PVG,Shanghai,China
+HO,NKG,Nanjing,China
+9C,PVG,Shanghai,China
+9C,SZX,Shenzhen,China
+GS,TSN,Tianjin,China
+DR,WNZ,Wenzhou,China
+NX,MFM,Macau,Macao
+BA,LHR,London,United Kingdom
+LH,FRA,Frankfurt,Germany
+LH,MUC,Munich,Germany
+AF,CDG,Paris,France
+KL,AMS,Amsterdam,Netherlands
+LX,ZRH,Zurich,Switzerland
+AY,HEL,Helsinki,Finland
+OS,VIE,Vienna,Austria
+TK,IST,Istanbul,Turkey
+EY,AUH,Abu Dhabi,United Arab Emirates
+GF,BAH,Bahrain,Bahrain
+WY,MCT,Muscat,Oman
+SV,JED,Jeddah,Saudi Arabia
+SV,RUH,Riyadh,Saudi Arabia
+SV,MED,Medina,Saudi Arabia
+NZ,AKL,Auckland,New Zealand
+AC,YVR,Vancouver,Canada
+ET,ADD,Addis Ababa,Ethiopia
+UL,CMB,Colombo,Sri Lanka
+BG,DAC,Dhaka,Bangladesh
+AI,DEL,New Delhi,India
+AI,BOM,Mumbai,India
+AI,BLR,Bengaluru,India
+AI,MAA,Chennai,India
+AI,HYD,Hyderabad,India
+AI,CCU,Kolkata,India
+AI,COK,Kochi,India
+AI,AMD,Ahmedabad,India
+IX,COK,Kochi,India
+IX,TRV,Thiruvananthapuram,India
+IX,TRZ,Tiruchirappalli,India
+IX,MAA,Chennai,India
+IX,CJB,Coimbatore,India
+IX,CCU,Kolkata,India
+IX,AMD,Ahmedabad,India
+6E,DEL,New Delhi,India
+6E,BOM,Mumbai,India
+6E,BLR,Bengaluru,India
+6E,MAA,Chennai,India
+6E,HYD,Hyderabad,India
+6E,COK,Kochi,India
+6E,CCU,Kolkata,India
+6E,ATQ,Amritsar,India
+KB,PBH,Paro,Bhutan
+BI,BWN,Bandar Seri Begawan,Brunei
+AK,KUL,Kuala Lumpur,Malaysia
+AK,PEN,Penang,Malaysia
+AK,LGK,Langkawi,Malaysia
+AK,BKI,Kota Kinabalu,Malaysia
+AK,KCH,Kuching,Malaysia
+QZ,CGK,Jakarta,Indonesia
+QZ,DPS,Denpasar,Indonesia
+QZ,SUB,Surabaya,Indonesia
+FD,BKK,Bangkok,Thailand
+FD,DMK,Bangkok,Thailand
+FD,CNX,Chiang Mai,Thailand
+FD,HKT,Phuket,Thailand
+OD,KUL,Kuala Lumpur,Malaysia
+OD,PEN,Penang,Malaysia
+OD,BKI,Kota Kinabalu,Malaysia
+OD,LGK,Langkawi,Malaysia
+ID,CGK,Jakarta,Indonesia
+ID,DPS,Denpasar,Indonesia
+ID,SUB,Surabaya,Indonesia
+ID,UPG,Makassar,Indonesia
+QG,CGK,Jakarta,Indonesia
+QG,DPS,Denpasar,Indonesia
+IP,PKU,Pekanbaru,Indonesia
+8B,CGK,Jakarta,Indonesia
+VN,SGN,Ho Chi Minh City,Vietnam
+VN,HAN,Hanoi,Vietnam
+VN,DAD,Da Nang,Vietnam
+VJ,SGN,Ho Chi Minh City,Vietnam
+VJ,HAN,Hanoi,Vietnam
+VJ,DAD,Da Nang,Vietnam
+VJ,PQC,Phu Quoc,Vietnam
+PR,MNL,Manila,Philippines
+PR,CEB,Cebu,Philippines
+5J,MNL,Manila,Philippines
+5J,CEB,Cebu,Philippines
+5J,DVO,Davao City,Philippines
+5J,ILO,Iloilo City,Philippines
+PG,USM,Ko Samui,Thailand
+SL,DMK,Bangkok,Thailand
+SL,HKT,Phuket,Thailand
+SL,CNX,Chiang Mai,Thailand
+SL,HDY,Hat Yai,Thailand
+UB,RGN,Yangon,Myanmar
+KR,PNH,Phnom Penh,Cambodia
+OM,UBN,Ulaanbaatar,Mongolia
+PX,POM,Port Moresby,Papua New Guinea
+FJ,NAN,Nadi,Fiji
+SB,NOU,Noumea,New Caledonia

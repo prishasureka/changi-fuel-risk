@@ -47,7 +47,7 @@ st.title("Changi Airport: Fuel Price Stress Test")
 st.markdown("""
 This dashboard models how jet fuel price shocks affect **each specific Changi route**.
 All 371 active Changi corridors are scored for demand impact under the selected fuel
-scenario — ranked from most vulnerable to most resilient. Drag the slider to simulate
+scenario - ranked from most vulnerable to most resilient. Drag the slider to simulate
 a shock and see which routes are first in line to lose passengers.
 
 **Data:** Singapore arrivals (data.gov.sg) · Fuel prices (EIA) · GDP (World Bank) ·
@@ -288,7 +288,7 @@ st.plotly_chart(fig_fuel, use_container_width=True)
 st.subheader("Full route risk table")
 st.info(
     "**Demand change ≠ route suspension.** These scores predict how much passenger demand "
-    "is expected to fall on each corridor — not whether the airline will suspend the route. "
+    "is expected to fall on each corridor, and not whether the airline will suspend the route. "
     "A high-frequency SQ route to London can absorb a −15% demand shock through fare adjustment or "
     "load-factor changes. A thin 3×-weekly route to Ulaanbaatar may be suspended at −5%. "
     "Use the distance and carrier type columns alongside the risk score to judge actual suspension likelihood."

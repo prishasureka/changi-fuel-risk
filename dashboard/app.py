@@ -45,15 +45,99 @@ route_features, fuel_monthly = load_data()
 
 st.title("Changi Airport: Fuel Price Stress Test")
 st.markdown("""
-This dashboard models how jet fuel price shocks affect **each specific Changi route**.
-All 371 active Changi corridors are scored for demand impact under the selected fuel
-scenario - ranked from most vulnerable to most resilient. Drag the slider to simulate
-a shock and see which routes are first in line to lose passengers.
-
-**Data:** Singapore arrivals (data.gov.sg) · Fuel prices (EIA) · GDP (World Bank) ·
-OurAirports route network · 2005–2026
-**Model:** Random Forest calibrated on historical arrival changes across 8 source countries.
+This tool lets you simulate what happens to passenger demand across Changi Airport's
+**371 international routes** when jet fuel prices change. Set a fuel price, pick a
+scenario type, and see which routes take the biggest hit — ranked from most to least
+vulnerable.
 """)
+
+with st.expander("How to use this dashboard", expanded=True):
+    st.markdown("""
+    **Step 1 — Set a fuel price.**
+    Use the slider on the left. It starts at the current market price. Drag it up to
+    simulate a price spike, or down to model a price drop.
+
+    **Step 2 — Choose a scenario type.**
+    - *Shock*: the price has just jumped today. Airlines haven't had time to adjust,
+      and recent months were at normal prices. This tests the immediate impact.
+    - *Sustained*: the price has been elevated for 3 or more months. Lag features
+      match the scenario price. This tests what happens if high prices persist.
+
+    **Step 3 — Filter if needed.**
+    Use the carrier filter (LCC vs FSC) and minimum distance slider to narrow the
+    view. Low-cost carriers operate on thinner margins and tend to be more
+    fuel-sensitive than full-service carriers.
+
+    **Step 4 — Read the chart.**
+    Routes are ranked from most to least vulnerable. The colour shows the risk tier:
+    - **Red (Critical)**: predicted demand drop of more than 20%
+    - **Orange (High)**: 10 to 20% drop
+    - **Yellow (Moderate)**: 3 to 10% drop
+    - **Green (Low)**: less than 3% drop, or positive
+
+    **Step 5 — Use the full table.**
+    Scroll down past the chart for the complete 371-route table. You can sort any
+    column. The "Fuel cost delta/seat" column shows how much more (or less) it costs
+    the airline to fly one seat on that route under your scenario vs. the current price.
+
+    **One important distinction:** these scores predict demand change, not whether an
+    airline will suspend a route. A major carrier running London 14 times a week has
+    plenty of slack to absorb a -15% demand hit through fare changes and load factor
+    adjustments. A thin 3x-weekly route to a smaller market might get cut at -5%.
+    Use distance and carrier type alongside the risk score to judge suspension
+    likelihood yourself.
+    """)
+
+with st.expander("What is the model actually doing?"):
+    st.markdown("""
+    **The model: Random Forest Regressor**
+
+    A random forest builds hundreds of individual decision trees. Each tree is a long
+    chain of if/then rules: "if fuel price is above $3.50 AND GDP per capita is below
+    $5,000 AND the month is July, then predict X." Each tree is trained on a slightly
+    different random slice of the data and a random subset of features. The forest's
+    final prediction is the average across all 200 trees.
+
+    **Why not just use a simpler model?**
+
+    The relationship between fuel prices and passenger arrivals is not linear. A basic
+    linear regression assumes that every $1 fuel increase cuts arrivals by the same
+    fixed amount regardless of context. That is wrong. A fuel spike in December hurts
+    less because seasonal demand is strong. The same spike on a low-GDP corridor hurts
+    more than on a high-GDP one. The Random Forest captures these interactions. In this
+    project, a linear model achieved R² = 0.09 on the test set. The Random Forest
+    achieved R² = 0.39, more than four times better.
+
+    **What it was trained to predict**
+
+    Given a set of features for a country-month (fuel price, 3-month and 6-month fuel
+    changes, lagged fuel prices, GDP per capita, GDP growth rate, LCC share, month,
+    quarter, peak season flag), it predicts the year-over-year log-difference in
+    passenger arrivals. The log-difference roughly maps to a percentage:
+    - -0.030 is about -3% arrivals
+    - -0.105 is about -10% arrivals
+    - -0.223 is about -20% arrivals
+
+    **Training details**
+
+    - 200 trees, each with a maximum depth of 8 levels
+    - Each leaf required at least 5 training samples (prevents overfitting to outliers)
+    - Trained on 2006 to 2018 monthly data from 8 countries, tested on 2019 to 2024
+    - Calibrated elasticity parameters are then applied to all 371 Changi routes using
+      each route's destination-country GDP and carrier type
+
+    **The key limitation**
+
+    Random forests cannot extrapolate beyond what they were trained on. For fuel prices
+    above roughly $4/gal (which never appeared in training), the model returns a
+    compressed, underestimated prediction. That is why the dashboard shows a warning
+    above $3.96/gal. Treat those scores as lower bounds on the actual risk.
+    """)
+
+st.caption(
+    "Data: Singapore arrivals (data.gov.sg) · Fuel prices (EIA) · "
+    "GDP (World Bank) · Route network (OurAirports) · 2005 to 2026"
+)
 
 st.divider()
 
@@ -316,39 +400,24 @@ st.dataframe(display_df, use_container_width=True, hide_index=True)
 
 # methodology note
 
-with st.expander("Methodology and limitations"):
+with st.expander("Data sources and limitations"):
     st.markdown(f"""
-    **How the model works:**
-    A Random Forest Regressor was trained on monthly Singapore air passenger arrival data
-    (2005–2019, 8 source countries) to learn how jet fuel prices, GDP conditions, corridor
-    LCC share, and seasonality relate to year-over-year arrival changes. The trained model
-    is then applied to all **{len(route_features):,} Changi routes across {route_features['destination_country'].nunique()} countries**,
-    using each route's destination-country GDP, LCC composition, and the fuel scenario you set.
-
-    **Predicted demand change** is in log-difference units. Approximate interpretation:
-    - −0.030 ≈ −3% arrivals
-    - −0.105 ≈ −10% arrivals
-    - −0.223 ≈ −20% arrivals
-
-    **Fuel cost delta/seat** = distance × 0.05 gal/seat-km × (scenario − current price).
-    A positive number means the route becomes more expensive to operate per seat.
-
-    **Data sources:**
+    **Data sources**
     - Passenger arrivals: Singapore Civil Aviation Authority via data.gov.sg
     - Jet fuel prices: US Energy Information Administration (EIA)
     - GDP per capita: World Bank Open Data
     - Route network: OurAirports
+    - Coverage: 2005 to 2026, {len(route_features):,} routes across {route_features['destination_country'].nunique()} countries
 
-    **Important distinctions:**
-    - Scores reflect **predicted demand change**, not route suspension probability. Suspension
-      depends on how marginal the route was before the shock, which is not modelled.
-    - Training data covers only 8 countries; predictions for the other 40 are calibrated
-      extrapolations — higher uncertainty for countries far from the training distribution.
-    - The model was trained on fuel prices up to **$3.96/gal**. Scenarios above this level
-      are outside the training range; the model will underestimate risk there.
-    - **Shock** mode sets fuel lags to recent historical prices (price just spiked today).
-      **Sustained** mode sets lags equal to the scenario price (elevated for 3+ months).
-      Airlines respond differently to these two situations.
+    **Fuel cost delta/seat** = distance x 0.05 gal/seat-km x (scenario price minus current price).
+    A positive number means the route becomes more expensive to operate per seat under your scenario.
+
+    **Limitations**
+    - Training data covers 8 countries. Predictions for the other 40+ are calibrated extrapolations,
+      with higher uncertainty for countries far from the training distribution.
+    - The model was trained on fuel prices up to $3.96/gal. Above this level it will underestimate risk.
     - Route network is a current snapshot, not historical.
-    - Model does not capture one-off events (pandemics, airline bankruptcies, geopolitics).
+    - The model does not capture one-off events such as pandemics, airline bankruptcies, or geopolitical shocks.
+    - Scores reflect predicted demand change only. Route suspension depends on how marginal the
+      route was before the shock, which is not modelled here.
     """)

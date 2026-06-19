@@ -89,19 +89,19 @@ with st.expander("How to use this dashboard", expanded=True):
     """)
 
 with st.expander("What is the model actually doing?"):
-    st.markdown("""
+    st.markdown(r"""
     **The model: Random Forest Regressor**
 
     A random forest builds hundreds of individual decision trees. Each tree is a long
-    chain of if/then rules: "if fuel price is above $3.50 AND GDP per capita is below
-    $5,000 AND the month is July, then predict X." Each tree is trained on a slightly
+    chain of if/then rules: "if fuel price is above \$3.50 AND GDP per capita is below
+    \$5,000 AND the month is July, then predict X." Each tree is trained on a slightly
     different random slice of the data and a random subset of features. The forest's
     final prediction is the average across all 200 trees.
 
     **Why not just use a simpler model?**
 
     The relationship between fuel prices and passenger arrivals is not linear. A basic
-    linear regression assumes that every $1 fuel increase cuts arrivals by the same
+    linear regression assumes that every \$1 fuel increase cuts arrivals by the same
     fixed amount regardless of context. That is wrong. A fuel spike in December hurts
     less because seasonal demand is strong. The same spike on a low-GDP corridor hurts
     more than on a high-GDP one. The Random Forest captures these interactions. In this
@@ -129,9 +129,9 @@ with st.expander("What is the model actually doing?"):
     **The key limitation**
 
     Random forests cannot extrapolate beyond what they were trained on. For fuel prices
-    above roughly $4/gal (which never appeared in training), the model returns a
+    above roughly \$4/gal (which never appeared in training), the model returns a
     compressed, underestimated prediction. That is why the dashboard shows a warning
-    above $3.96/gal. Treat those scores as lower bounds on the actual risk.
+    above \$3.96/gal. Treat those scores as lower bounds on the actual risk.
     """)
 
 st.caption(
